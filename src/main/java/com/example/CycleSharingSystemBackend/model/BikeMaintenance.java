@@ -14,7 +14,7 @@ public class BikeMaintenance {
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="fk_bike_id")
-    private Bikes bikeId;
+    private Bikes Bike_id;
 
     private Date date;
     private String type;
@@ -24,10 +24,10 @@ public class BikeMaintenance {
     public BikeMaintenance() {
     }
 
-    public BikeMaintenance(Long maintenanceId, Bikes bike, Date date, String type, boolean status, String comments) {
+    public BikeMaintenance(Long maintenanceId, Bikes bikes, Date date, String type, boolean status, String comments) {
         this.maintenanceId = maintenanceId;
 
-        this.bikeId = bikeId;
+        this.Bike_id = Bike_id;
 
         this.date = date;
         this.type = type;

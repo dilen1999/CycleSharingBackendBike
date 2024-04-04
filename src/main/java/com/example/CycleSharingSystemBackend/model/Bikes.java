@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Getter
@@ -30,6 +31,11 @@ public class Bikes {
 
     @Transient
     private String formattedMaintenanceDate; // Transient field to hold formatted date
+
+
+//    @OneToMany(mappedBy = "bikes", cascade = CascadeType.ALL)
+//    private List<BikeMaintenance> maintenancesRecords;
+
 
 //    @Transient
 //    private String qrCodeValue; // New field for storing QR code value

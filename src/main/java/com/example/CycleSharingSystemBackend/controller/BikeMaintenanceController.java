@@ -1,10 +1,9 @@
 package com.example.CycleSharingSystemBackend.controller;
 
-
-
-import com.example.BikeManagementService.model.BikeMaintenance;
-import com.example.BikeManagementService.service.BikeMaintenanceService;
 import java.util.List;
+
+import com.example.CycleSharingSystemBackend.model.BikeMaintenance;
+import com.example.CycleSharingSystemBackend.service.BikeMaintenanceService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping({"/api/v1/bikeMaintenance"})
+@RequestMapping({"/Bikes/bikeMaintenance"})
 public class BikeMaintenanceController {
     private final BikeMaintenanceService bikeMaintenanceService;
 

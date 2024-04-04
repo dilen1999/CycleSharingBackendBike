@@ -2,12 +2,14 @@ package com.example.CycleSharingSystemBackend.dto;
 
 
 import com.example.CycleSharingSystemBackend.model.Bikes;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
 public class BikeMaintenanceDTO {
     private Long maintenanceId;
-    private Bikes bike;
+    private Bikes bikes;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date date;
     private String type;
     private boolean status;
@@ -17,8 +19,8 @@ public class BikeMaintenanceDTO {
         return this.maintenanceId;
     }
 
-    public Bikes getBike() {
-        return this.bike;
+    public Bikes getBikes() {
+        return this.bikes;
     }
 
     public Date getDate() {
@@ -41,8 +43,8 @@ public class BikeMaintenanceDTO {
         this.maintenanceId = maintenanceId;
     }
 
-    public void setBikeId(final Long bikeId) {
-        this.bike = bike;
+    public void setBikeId(final Long Bike_id) {
+        this.bikes = bikes;
     }
 
     public void setDate(final Date date) {
@@ -87,8 +89,8 @@ public class BikeMaintenanceDTO {
                     return false;
                 }
 
-                Object this$bike = this.getBike();
-                Object other$bike = other.getBike();
+                Object this$bike = this.getBikes();
+                Object other$bike = other.getBikes();
                 if (this$bike == null) {
                     if (other$bike != null) {
                         return false;
@@ -146,7 +148,7 @@ public class BikeMaintenanceDTO {
         result = result * 59 + (this.isStatus() ? 79 : 97);
         Object $maintenanceId = this.getMaintenanceId();
         result = result * 59 + ($maintenanceId == null ? 43 : $maintenanceId.hashCode());
-        Object $bikeId = this.getBike();
+        Object $bikeId = this.getBikes();
         result = result * 59 + ($bikeId == null ? 43 : $bikeId.hashCode());
         Object $date = this.getDate();
         result = result * 59 + ($date == null ? 43 : $date.hashCode());
@@ -159,12 +161,12 @@ public class BikeMaintenanceDTO {
 
     public String toString() {
         Long var10000 = this.getMaintenanceId();
-        return "BikeMaintenanceDTO(maintenanceId=" + var10000 + ", bikeId=" + this.getBike() + ", date=" + String.valueOf(this.getDate()) + ", type=" + this.getType() + ", status=" + this.isStatus() + ", comments=" + this.getComments() + ")";
+        return "BikeMaintenanceDTO(maintenanceId=" + var10000 + ", bikeId=" + this.getBikes() + ", date=" + String.valueOf(this.getDate()) + ", type=" + this.getType() + ", status=" + this.isStatus() + ", comments=" + this.getComments() + ")";
     }
 
     public BikeMaintenanceDTO(final Long maintenanceId, final Long bikeId, final Date date, final String type, final boolean status, final String comments) {
         this.maintenanceId = maintenanceId;
-        this.bike = bike;
+        this.bikes = bikes;
         this.date = date;
         this.type = type;
         this.status = status;
