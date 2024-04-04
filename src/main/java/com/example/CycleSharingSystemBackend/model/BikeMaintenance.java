@@ -12,9 +12,9 @@ public class BikeMaintenance {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Use auto-increment strategy
     private Long maintenanceId;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="fk_bike_id")
-    private Bikes Bike_id;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn(name="fk_bike_id")
+    private Long Bike_id;
 
     private Date date;
     private String type;

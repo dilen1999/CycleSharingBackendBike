@@ -5,7 +5,7 @@ package com.example.CycleSharingSystemBackend.service;
 import java.util.List;
 import java.util.Optional;
 
-import com.example.CycleSharingSystemBackend.dto.BikeMaintenanceDTO;
+//import com.example.CycleSharingSystemBackend.dto.BikeMaintenanceDTO;
 import com.example.CycleSharingSystemBackend.model.BikeMaintenance;
 import com.example.CycleSharingSystemBackend.repository.BikeMaintenanceRepository;
 import org.springframework.stereotype.Service;
@@ -51,14 +51,14 @@ public class BikeMaintenanceService {
         return this.bikeMaintenanceRepository.findAll();
     }
 
-    private BikeMaintenanceDTO convertToDTO(BikeMaintenance maintenance) {
-        BikeMaintenanceDTO dto = new BikeMaintenanceDTO();
-        dto.setMaintenanceId(maintenance.getMaintenanceId());
-        dto.setBikeId(maintenance.getBike_id().getBike_id());
-        dto.setDate(maintenance.getDate());
-        dto.setType(maintenance.getType());
-        dto.setStatus(maintenance.isStatus());
-        dto.setComments(maintenance.getComments());
-        return dto;
-    }
+//    private BikeMaintenanceDTO convertToDTO(BikeMaintenance maintenance) {
+//        BikeMaintenanceDTO dto = new BikeMaintenanceDTO();
+//        dto.setMaintenanceId(maintenance.getMaintenanceId());
+//        dto.setBikeId(maintenance.getBike_id().getBike_id());
+//        dto.setDate(maintenance.getDate());
+//        dto.setType(maintenance.getType());
+//        dto.setStatus(maintenance.isStatus());
+//        dto.setComments(maintenance.getComments());
+//        return dto;
+//    }
 }
