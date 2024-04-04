@@ -3,6 +3,7 @@ package com.example.CycleSharingSystemBackend.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
@@ -21,6 +22,10 @@ public class BikeMaintenance {
     private boolean status;
     private String comments;
 
+
+    @Transient
+    private String formattedMaintenanceDate1; // Transient field to hold formatted date
+
     public BikeMaintenance() {
     }
 
@@ -33,6 +38,13 @@ public class BikeMaintenance {
         this.type = type;
         this.status = status;
         this.comments = comments;
+    }
+
+    public String getFormattedMaintenanceDate1() {
+        // Format the last maintenance date
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        formattedMaintenanceDate1 = sdf.format(date);
+        return formattedMaintenanceDate1;
     }
 
 
